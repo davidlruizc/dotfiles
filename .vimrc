@@ -134,6 +134,7 @@ xnoremap <C-A> <C-C>ggVG
 imap <C-L> <C-O>$
 
 nmap <C-P> :Files<cr>
+nmap <C-T> :Ag<cr>
 
 set exrc
 set secure
