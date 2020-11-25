@@ -36,6 +36,9 @@ Plug 'phanviet/vim-monokai-pro'
 Plug 'flazz/vim-colorschemes'
 Plug 'chriskempson/base16-vim'
 
+" Smooth scroll
+Plug 'psliwka/vim-smoothie'
+
 call plug#end()
 
 if !has("gui_running")
