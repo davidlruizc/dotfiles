@@ -2,6 +2,8 @@
 
 These are my dotfiles that I use on my Macbook Pro
 
+![Setup ](https://github.com/davidlruizc/dotfiles/blob/main/thumbnails/setup.png)
+
 |Things I use|What they do|
 |-|-|
 |[zsh](https://github.com/ohmyzsh/ohmyzsh)|Terminal Shell|
