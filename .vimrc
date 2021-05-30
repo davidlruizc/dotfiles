@@ -1,5 +1,9 @@
-set encoding=UTF-8
+"set termencoding=utf-8
+set encoding=utf-8
+set fileencoding=utf-8
+set fileencodings=ucs-bom,utf8,latin1
 set clipboard=unnamedplus
+set cpt=k/usr/dict/*,k~/spanish
 filetype plugin indent on
 filetype plugin on
 
@@ -27,6 +31,7 @@ Plug 'junegunn/fzf'
 
 " Theme settings
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'norcalli/nvim-colorizer.lua'
 
 " ThePrimeagen setup color theme
@@ -38,6 +43,18 @@ Plug 'chriskempson/base16-vim'
 
 " Smooth scroll
 Plug 'psliwka/vim-smoothie'
+
+" Pinkmare theme
+Plug 'matsuuu/pinkmare'
+
+" Tokyo Night theme
+Plug 'folke/tokyonight.nvim'
+
+" Typescript
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+" Floatterm
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -65,12 +82,27 @@ set termguicolors
 
 syntax on
 let g:one_allow_italics=1
-let g:airline_theme='one'
+"let g:airline_theme='one'
 let g:airline_powerline_fonts=1
 let g:NERDTreeChDirMode = 2  " Changes the current directory with the actual node
 
+" -----------------------
+"  THEMES
+" -----------------------
+
 " gruvbox theme
-colorscheme gruvbox
+" colorscheme gruvbox
+
+" pinkmare theme
+"colorscheme pinkmare
+
+" tokyonight setup theme
+let g:tokyonight_style = "night"
+let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
+
+" tokyonight theme
+colorscheme tokyonight
+
 
 " One Theme 
 "color one
@@ -142,7 +174,7 @@ nmap <C-T> :Ag<cr>
 set exrc
 set secure
 
-nmap <leader>s :source ~/.vimrc<cr>
+nmap <C-S> :source ~/.vimrc<cr>
 
 nmap <silent> <Leader>w :update<cr>
 
@@ -162,6 +194,11 @@ map <F2> :NERDTreeToggle<CR>
 vmap ++ <plug>NERDCommenterToggle
 nmap ++ <plug>NERDCommenterToggle
 
+" Tab selection
+vmap <Tab> >gv
+vmap <S-Tab> <gv
+
+
 " Navigate between splitted screeens Ctrl + k and Ctrl + j to move up and
 " down.
 " Ctrl l and Ctrl h to left and right
@@ -170,6 +207,15 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
+"'' Floatterm ''"
+if filereadable(expand("~/.config/nvim/plugged/vim-floaterm/plugin/floaterm.vim"))
+  nnoremap <leader>fd :FloatermNew --autoclose=2 --height=0.9 --width=0.9 --wintype=floating lazydocker<CR>
+  nnoremap <C-g> :FloatermNew --autoclose=2 --height=0.9 --width=0.9 --wintype=floating lazygit<CR>
+  nnoremap <leader>fr :FloatermNew --autoclose=2 --height=0.75 --width=0.75 --wintype=floating ranger<CR>
+  nnoremap <C-f> :FloatermNew --autoclose=2 --height=0.9 --width=0.9 --wintype=floating<CR>
+endif
+
 source ~/.go.vimrc
 source ~/.coc.vimrc
 source ~/.airline.vimrc
+source ~/.typescript.vimrc
