@@ -53,8 +53,12 @@ Plug 'folke/tokyonight.nvim'
 " Typescript
 Plug 'leafgarland/typescript-vim'
 Plug 'peitalin/vim-jsx-typescript'
+
 " Floatterm
 Plug 'voldikss/vim-floaterm'
+
+" ACK - Search tool
+Plug 'mileszs/ack.vim'
 
 call plug#end()
 
@@ -91,7 +95,7 @@ let g:NERDTreeChDirMode = 2  " Changes the current directory with the actual nod
 " -----------------------
 
 " gruvbox theme
-" colorscheme gruvbox
+ colorscheme gruvbox
 
 " pinkmare theme
 "colorscheme pinkmare
@@ -101,7 +105,7 @@ let g:tokyonight_style = "night"
 let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
 
 " tokyonight theme
-colorscheme tokyonight
+"colorscheme tokyonight
 
 
 " One Theme 
@@ -169,6 +173,7 @@ xnoremap <C-A> <C-C>ggVG
 imap <C-L> <C-O>$
 
 nmap <C-P> :Files<cr>
+" :Ag - deprecated
 nmap <C-T> :Ag<cr>
 
 set exrc
