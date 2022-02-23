@@ -136,7 +136,8 @@ set showtabline=2
 set noshowmode
 
 set backspace=indent,eol,start
-set listchars=space:·,tab:→\ 
+" Space dots and arrow for tabs
+"set listchars=space:·,tab:→\ 
 
 set backup
 set noswapfile

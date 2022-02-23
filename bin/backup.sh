@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+cp $HOME/.vimrc .
 cp $HOME/.go.vimrc .
 cp $HOME/.coc.vimrc .
 cp $HOME/.airline.vimrc .
