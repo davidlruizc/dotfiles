@@ -15,6 +15,18 @@ These are my dotfiles that I use on my Macbook Pro
 |[bottom](https://github.com/ClementTsang/bottom)|Teminal system monitor|
 ---
 
+## Additional installation
+
+It's neccesary to install [the silver searcher](https://github.com/ggreer/the_silver_searcher) to be able to use the `:Ag` plugin.
+
+### Mac OS installation
+
+Using Homebrew
+
+```sh
+brew install the_silver_searcher
+```
+
 ## Run
 
 ```sh 
