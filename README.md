@@ -13,6 +13,8 @@ These are my dotfiles that I use on my Macbook Pro
 |[airline](https://github.com/vim-airline/vim-airline)|Airline|
 |[lazygit](https://github.com/jesseduffield/lazygit#installation)|Git UI terminal|
 |[bottom](https://github.com/ClementTsang/bottom)|Teminal system monitor|
+|[the_silver_searcher](https://github.com/ggreer/the_silver_searcher)|Teminal searcher system|
+
 ---
 
 ## Additional installation
